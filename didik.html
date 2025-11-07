@@ -1,0 +1,299 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 45%; /* Lebar untuk tampilan desktop */
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Media Query untuk tampilan mobile */
+@media (max-width: 768px) {
+    .container {
+        width: 80%; /* Lebar untuk tampilan mobile */
+    }
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.header .contact h2 {
+    margin: 0; /* Menghapus margin default dari heading */
+    font-size: 24px; /* Ukuran font heading */
+}
+
+.header .contact p {
+    margin: 5px 0; /* Margin untuk jarak antar paragraf */
+}
+
+.contact a {
+    color: #fff; /* Mengatur warna link di bagian contact menjadi putih */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li {
+    background: #3498db;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.skills ul li:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.skills ul li:nth-child(even) {
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills ul li:hover {
+    background: #2980b9;
+    transition: background 0.3s ease;
+}
+
+.experience .job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.job p {
+    margin-bottom: 5px;
+}
+
+/* Floating Animation */
+.floating {
+    animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.photo-container {
+    width: 150px; /* Ukuran kontainer foto */
+    height: 150px; /* Ukuran kontainer foto */
+    margin-right: 20px; /* Jarak dengan elemen di samping */
+    display: inline-block; /* Mengatur tampilan sebagai blok inline */
+    border-radius: 50%; /* Membuat kontainer menjadi lingkaran */
+    overflow: hidden; /* Memastikan konten tidak keluar dari bingkai */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+
+.photo-container img {
+    width: 100%; /* Memastikan gambar mengisi lebar kontainer */
+    height: 100%; /* Memastikan gambar mengisi tinggi kontainer */
+    object-fit: cover; /* Memastikan gambar tetap terjaga proporsinya */
+    animation: floating 5s ease-in-out infinite; /* Animasi floating */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #00e676; /* Hijau seperti WhatsApp */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Mengubah arah menjadi kolom pada layar kecil */
+        align-items: center; /* Memusatkan konten secara horizontal */
+    }
+    .photo-container {
+        margin-bottom: 15px; /* Ruang di bawah foto */
+    }
+    .contact {
+        text-align: center; /* Memusatkan teks kontak pada tampilan kecil */
+        max-width: 100%; /* Membiarkan kontak mengambil seluruh lebar pada tampilan kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-container {
+        width: 120px; /* Menyesuaikan ukuran foto untuk layar lebih kecil */
+        height: 120px;
+    }
+    .contact h2 {
+        font-size: 20px; /* Menyesuaikan ukuran font untuk tampilan kecil */
+    }
+    .contact p {
+        font-size: 14px; /* Menyesuaikan ukuran font untuk paragraf */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="photo-container">
+                <img src="https://lh3.googleusercontent.com/d/1_U6eWZ46xrngQOPvtLoj1ELx3tbCmAtV" alt="Didik Rahmadi" class="floating" style="margin-top: 5px;">
+            </div>
+            <div class="contact">
+                <h2>DIDIK RAHMADI</h2>
+                <p>Email: didikrahmadi@gmail.com</p>
+                <p>Phone: <a href="https://wa.me/6281285242527" target="_blank">+6281285242527</a></p>
+                <p>Website: <a href="https://sites.google.com/view/didik-rahmadi" target="_blank">https://sites.google.com/view/didik-rahmadi</a></p>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="section about">
+            <h2>About Me</h2>
+            <p>Aku hanyalah seorang guru biasa yang suka belajar hal baru.</p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section experience">
+            <h2>Karir & Pengalaman</h2>
+            <div class="job">
+                <ul>
+                    <li>2009 - 2011 : Guru Bahasa Inggris SDN Tanah Tinggi 02 Petang.</li>
+                    <li>2011 - 2015 : Guru Kelas SDN Jagakarsa 03 Pagi.</li>
+                    <li>2015 - sekarang : Guru Kelas SDN Pejaten Timur 11.</li>
+                    <li>2020 - sekarang : Wakil Kepala Sekolah Bidang Akademik SDN Pejaten Timur 11.</li>
+                    <li>2019 - 2021 : Fasilitator E-Rapor SD Kemendikbudristek.</li>
+                    <li>2019 - 2021 : Tim Sosialisasi E-Rapor SD Dinas Pendidikan Provinsi DKI Jakarta.</li>
+                    <li>2022 : Pengajar Praktik Pendidikan Guru Penggerak Angkatan 5 DKI Jakarta.</li>
+                    <li>2022 : Penulis Modul Ajar Untuk PMM Direktorat SD Kemendikbudristek (Pendidikan Pancasila - Hak & Kewajiban).</li>
+                    <li>2023 : Penulis Modul Ajar Untuk PMM Direktorat SD Kemendikbudristek (Matematika - Luas & Keliling Bangun Datar).</li>
+                    <li>2023 : Penulis Modul Projek P5 Untuk PMM Direktorat SD Kemendikbudristek (Kewirausahaan - Kecil-Kecil Jago Branding).</li>
+                    <li>2024 : Penulis Modul Pencegahan Kekerasan Seksual untuk SD (Pusat Penguatan Karakter Kemendikbudristek).</li>
+                    <li>2024 : Tim Pengembang Kurikulum Bidang SD Dinas Pendidikan Provinsi DKI Jakarta.</li>
+                    <li>2024 : Fasilitator Pendidikan Guru Penggerak Angkatan 11 Kota Semarang.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section skills">
+            <h2>Keahlian</h2>
+            <ul>
+                <li>Komunikasi</li>
+                <li>Data Analysis</li>
+                <li>Web Development</li>
+                <li>Pengembang Pembelajaran</li>
+            </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="section education">
+            <h2>Education</h2>
+            <p><strong>S1 :</strong> Pendidikan Guru Sekolah Dasar Universitas Negeri Jakarta</p>
+        </div>
+
+        <!-- Follow Me -->
+        <div class="section follow-me">
+            <h2>Follow Me</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/vQJPpbNG64vEkkTj/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40" height="40">
+                </a>
+                <a href="https://www.instagram.com/didik.rahmadi" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40" height="40">
+                </a>
+                <a href="https://www.youtube.com/@DidikRahmadi" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" width="40" height="40">
+                </a>
+                <a href="https://wa.me/6281285242527" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40" height="40">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 <a href="https://wa.me/6281285242527" target="_blank">Didik Rahmadi</a>. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
